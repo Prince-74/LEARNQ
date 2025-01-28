@@ -111,5 +111,80 @@
       </div>
     </main>
   </div>
+  <script>
+  document.querySelector('.search-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const youtubeLink = document.querySelector('.search-input input').value.trim();
+    const quizSection = document.querySelector('.quiz-section');
+
+    // Clear previous quiz content
+    quizSection.innerHTML = '';
+
+    if (!youtubeLink) {
+      quizSection.innerHTML = `<p style="color: red;">Please enter a valid YouTube link.</p>`;
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:8080/generate-quiz', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ youtubeLink }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+
+        // Display quiz questions dynamically
+        if (data.quiz && data.quiz.length > 0) {
+          data.quiz.forEach((question, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.classList.add('quiz-question');
+            questionDiv.innerHTML = `
+              <h3>${index + 1}. ${question}</h3>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q${index}">
+                  <span>Option 1</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q${index}">
+                  <span>Option 2</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q${index}">
+                  <span>Option 3</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q${index}">
+                  <span>Option 4</span>
+                </label>
+              </div>
+            `;
+            quizSection.appendChild(questionDiv);
+          });
+
+          // Add a submit button
+          const submitButtonDiv = document.createElement('div');
+          submitButtonDiv.classList.add('quiz-submit');
+          submitButtonDiv.innerHTML = `
+            <button class="btn btn-primary btn-large">Submit Answers</button>
+          `;
+          quizSection.appendChild(submitButtonDiv);
+        } else {
+          quizSection.innerHTML = `<p>No quiz questions were generated. Please try another link.</p>`;
+        }
+      } else {
+        const errorData = await response.json();
+        quizSection.innerHTML = `<p style="color: red;">Error: ${errorData.error}</p>`;
+      }
+    } catch (error) {
+      quizSection.innerHTML = `<p style="color: red;">Failed to connect to the backend.</p>`;
+    }
+  });
+</script>
 </body>
 </html>
