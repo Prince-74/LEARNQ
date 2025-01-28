@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnQ - Learn Through Quizzes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <i class="lucide-brain"></i>
+      <span><img src ="images/brain.png"><span>  </span>LearnQ</span>
+    </div>
+    <div class="navbar-buttons">
+      <a href="login.html" class="btn btn-text">Login</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <button class="sidebar-toggle">
+        <i class="lucide-chevron-left"></i>
+      </button>
+      <div class="sidebar-content">
+        <div class="sidebar-menu">
+          <a href="index.html" class="sidebar-item active">
+            <i class="lucide-home"></i>
+            <span>Home</span>
+          </a>
+          <a href="playlists.html" class="sidebar-item">
+            <i class="lucide-youtube"></i>
+            <span>YouTube Playlists</span>
+          </a>
+        </div>
+        <div class="sidebar-footer">
+          <a href="account.html" class="sidebar-item">
+            <i class="lucide-user"></i>
+            <span>Account</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Rewards Section -->
+      <div class="rewards-card">
+        <div class="coin-icon">₵</div>
+        <span>1,234 Coins</span>
+      </div>
+
+      <!-- Welcome Content -->
+      <div class="welcome-section">
+        <h1>Welcome to LearnQ</h1>
+        <p>Transform your YouTube learning experience with interactive quizzes</p>
+
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="lucide-youtube"></i>
+            </div>
+            <h3>YouTube Integration</h3>
+            <p>Transform any YouTube playlist into an interactive learning experience</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="lucide-brain"></i>
+            </div>
+            <h3>Smart Questions</h3>
+            <p>AI-powered quiz generation based on video content</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="lucide-award"></i>
+            </div>
+            <h3>Earn Rewards</h3>
+            <p>Complete quizzes to earn coins and unlock achievements</p>
+          </div>
+        </div>
+
+        <a href="signup.html" class="btn btn-primary btn-large">Get Started</a>
+      </div>
+
+      <!-- Help Button -->
+      <button class="help-button">
+        <i class="lucide-help-circle"></i>
+      </button>
+    </main>
+  </div>
+</body>
+</html>

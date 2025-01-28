@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Playlists - LearnQ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <i class="lucide-brain"></i>
+      <span>LearnQ</span>
+    </div>
+  </nav>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <button class="sidebar-toggle">
+        <i class="lucide-chevron-left"></i>
+      </button>
+      <div class="sidebar-content">
+        <div class="sidebar-menu">
+          <a href="index.html" class="sidebar-item">
+            <i class="lucide-home"></i>
+            <span>Home</span>
+          </a>
+          <a href="playlists.html" class="sidebar-item active">
+            <i class="lucide-youtube"></i>
+            <span>YouTube Playlists</span>
+          </a>
+        </div>
+        <div class="sidebar-footer">
+          <a href="account.html" class="sidebar-item">
+            <i class="lucide-user"></i>
+            <span>Account</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="playlist-container">
+        <div class="playlist-header">
+          <h1>Generate Quiz from YouTube</h1>
+          <p>Enter a YouTube video or playlist URL to generate interactive quiz questions</p>
+        </div>
+
+        <form class="search-form">
+          <div class="search-input">
+            <i class="lucide-search"></i>
+            <input type="text" placeholder="Paste YouTube URL here...">
+            <button type="submit" class="btn btn-primary">Generate Quiz</button>
+          </div>
+        </form>
+
+        <div class="quiz-section">
+          <!-- Quiz questions will be dynamically added here -->
+          <div class="quiz-question">
+            <h3>1. What is the main topic discussed in the video?</h3>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q1">
+                <span>Web Development</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q1">
+                <span>Machine Learning</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q1">
+                <span>Data Structures</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q1">
+                <span>Mobile Development</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-question">
+            <h3>2. Which framework was mentioned first?</h3>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q2">
+                <span>React</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q2">
+                <span>Angular</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q2">
+                <span>Vue</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q2">
+                <span>Svelte</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-submit">
+            <button class="btn btn-primary btn-large">Submit Answers</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

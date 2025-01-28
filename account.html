@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account - LearnQ</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <i class="lucide-brain"></i>
+      <span>LearnQ</span>
+    </div>
+  </nav>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <button class="sidebar-toggle">
+        <i class="lucide-chevron-left"></i>
+      </button>
+      <div class="sidebar-content">
+        <div class="sidebar-menu">
+          <a href="index.html" class="sidebar-item">
+            <i class="lucide-home"></i>
+            <span>Home</span>
+          </a>
+          <a href="playlists.html" class="sidebar-item">
+            <i class="lucide-youtube"></i>
+            <span>YouTube Playlists</span>
+          </a>
+        </div>
+        <div class="sidebar-footer">
+          <a href="account.html" class="sidebar-item active">
+            <i class="lucide-user"></i>
+            <span>Account</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="account-container">
+        <div class="profile-header">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Profile" class="profile-image">
+          <div>
+            <h1>John Doe</h1>
+            <p>Premium Member</p>
+          </div>
+        </div>
+
+        <div class="profile-content">
+          <div class="profile-info">
+            <div class="info-item">
+              <i class="lucide-mail"></i>
+              <span>john.doe@example.com</span>
+            </div>
+            <div class="info-item">
+              <i class="lucide-phone"></i>
+              <span>+1 (555) 123-4567</span>
+            </div>
+            <div class="info-item">
+              <i class="lucide-map-pin"></i>
+              <span>New York, USA</span>
+            </div>
+            <div class="info-item">
+              <i class="lucide-calendar"></i>
+              <span>Joined January 2024</span>
+            </div>
+          </div>
+
+          <div class="stats-container">
+            <h2>Statistics</h2>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-value text-blue">42</div>
+                <div class="stat-label">Quizzes Completed</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value text-green">87%</div>
+                <div class="stat-label">Average Score</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value text-purple">1,234</div>
+                <div class="stat-label">Coins Earned</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value text-yellow">15</div>
+                <div class="stat-label">Achievements</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
